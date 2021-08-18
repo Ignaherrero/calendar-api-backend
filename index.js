@@ -13,6 +13,7 @@ app.use(express.static("public"));
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/auth"));
+app.use("/api/events", require("./routes/events"));
 
 app.listen(4000, () => {
   console.log(`servidor corriendo en el puerto ${process.env.port} `);
